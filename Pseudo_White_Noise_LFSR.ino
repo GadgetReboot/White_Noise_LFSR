@@ -24,9 +24,11 @@ private:
   uint16_t reg;
 public:
 
+//  xor tap points for 16 bit LFSR:  16 15 13 4  
+//  feedback polynomial x^16 + x^15 + x^13 + x^4 + 1
   LFSR(uint16_t seed) : reg(seed) {}  
   bool next() {
-    uint8_t b = ((reg >> 0) ^ (reg >> 1) ^ (reg >> 3) ^ (reg >> 12)) & 1;  //  xor tap points for 16 bit LFSR
+    uint8_t b = ((reg >> 0) ^ (reg >> 1) ^ (reg >> 3) ^ (reg >> 12)) & 1;  // tap points 16 15 13 4 correspond to bits 0 1 3 12 in 16 bit integer
     reg = (reg >> 1) | (b << 15);
     return b;
   }
