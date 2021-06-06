@@ -1,4 +1,5 @@
 // Generates digital pseudo "white" noise using a linear feedback shift register
+// Output noise pin:  GPIO 4,  ATTiny85 pin 3
 // Based on the "NoiseChip" project:  https://github.com/aleh/NoiseChip
 //
 // Requirements for Arduino IDE:   
