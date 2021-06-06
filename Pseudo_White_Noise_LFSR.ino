@@ -11,7 +11,7 @@
 //                                        compile
 // 
 // Arduino IDE settings:   Board/Processor:  ATTiny85         
-//                         Clock:            Internal 1 MHz
+//                         Clock:            Internal 8 MHz  (Burn bootloader to ensure clock fuse is set)
 //                         Programmer:       Arduino as ISP (Using an Uno to program ATTiny85 over SPI)
 //                                           General usage: https://youtu.be/7Rz9A9VbDx4?t=300
 
